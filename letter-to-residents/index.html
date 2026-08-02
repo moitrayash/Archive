@@ -5,118 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Letter to Residents</title>
 <meta name="description" content="Letter to Residents — from my days as a Resident Advisor at Cornell." />
-<style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { font-size: 16px; }
-body {
-background: #fff;
-color: #000;
-font-family: Georgia, 'Times New Roman', serif;
-line-height: 1.8;
-padding: 80px 24px 120px;
-}
-.wrap {
-width: 100%;
-max-width: 680px;
-margin: 0 auto;
-}
-header {
-text-align: center;
-}
-h1 {
-font-size: 44px;
-font-weight: normal;
-letter-spacing: 1.5px;
-line-height: 1.2;
-}
-.subtitle {
-font-style: italic;
-font-size: 17px;
-color: #666;
-margin-top: 18px;
-}
-.tip {
-position: relative;
-border-bottom: 1px dotted #bbb;
-cursor: help;
-}
-.tip:hover {
-color: #000;
-}
-.tip:hover::before {
-content: attr(data-tip);
-position: absolute;
-bottom: calc(100% + 8px);
-left: 50%;
-transform: translateX(-50%);
-width: max-content;
-max-width: 260px;
-background: #000;
-color: #fff;
-font-style: normal;
-font-size: 13px;
-line-height: 1.5;
-letter-spacing: 0.01em;
-padding: 6px 10px;
-white-space: normal;
-z-index: 2;
-pointer-events: none;
-}
-.rule {
-width: 128px;
-height: 1px;
-background: #999;
-margin: 40px auto 0;
-}
-.letter {
-margin-top: 64px;
-}
-.letter p {
-font-size: 17px;
-line-height: 1.9;
-margin-bottom: 24px;
-text-wrap: pretty;
-}
-.salutation {
-margin-bottom: 32px;
-}
-.signoff {
-margin-top: 48px;
-font-size: 17px;
-line-height: 1.7;
-}
-.signoff .role {
-font-style: italic;
-color: #666;
-}
-.back {
-margin-top: 88px;
-text-align: center;
-}
-.back a {
-font-size: 15px;
-color: #888;
-text-decoration: none;
-letter-spacing: 0.02em;
-}
-.back a:hover {
-color: #000;
-}
-@media (max-width: 600px) {
-body { padding: 56px 20px 88px; }
-h1 { font-size: 32px; }
-}
-</style>
+<link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-<div class="wrap">
-<header>
-<h1>Letter to Residents</h1>
-<p class="subtitle">Penned first in Summer 2025, displayed <span class="tip" data-tip="Clara Dickson Hall">Fall 2025</span> and <span class="tip" data-tip="High Rise 5">Spring 2026</span></p>
-<div class="rule"></div>
-</header>
+<div id="app">
+  <div class="item-page">
+    <a href="/" class="back-link">Back to Archive</a>
+    <h1 class="item-title">Letter to Residents</h1>
+    <p class="item-date">Penned first in Summer 2025, displayed <span class="tip" data-tip="Clara Dickson Hall">Fall 2025</span> and <span class="tip" data-tip="High Rise 5">Spring 2026</span></p>
 
-<article class="letter">
+    <article class="item-content">
 <p class="salutation">Dear Residents,</p>
 
 <p>Whatever time of the year it is, I hope you&rsquo;re doing well. I know that it&rsquo;s often unflattering to think of survival as an achievement, but I&rsquo;d like you to recognize that it&rsquo;s hard. Fall or Spring, through rain, sleet, snow, and (occasional) sunshine, the gorgeous gorges of Ithaca bring with water and ice their own turmoil. The fact that you&rsquo;re here, reading this, is sort of an achievement in itself: you are here. Here, in itself, may not seem particularly pleasant to you; it isn&rsquo;t meant to be that way. Regardless, though, the fact that your two legs occupy this space in front of this pinboard is a testament to something.</p>
@@ -133,9 +31,17 @@ h1 { font-size: 32px; }
 [SIGNED]<br />
 <span class="role">Resident Advisor, Clara Dickson Hall</span>
 </div>
-</article>
+    </article>
+  </div>
 
-<div class="back"><a href="/" target="_blank" rel="noopener noreferrer">Back to Archive</a></div>
+  <footer>
+    <p>Yash Moitra (<span id="footerYear">2026</span>)</p>
+    <p class="footer-site"><a href="https://yashmoitra.com" target="_blank" rel="noopener noreferrer">yashmoitra.com</a></p>
+  </footer>
 </div>
+
+<script>
+  document.getElementById("footerYear").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
